@@ -3,5 +3,21 @@
     <strong>Title:</strong>
     <%= book.title %>
   </p>
+  <p>
+    <strong>Author:</strong>
+    <%= book.author %>
+  </p>
+
+  <p>
+    <strong>Price:</strong>
+    <%= number_to_currency(book.price) if book.price %>
+  </p>
+
+  <% if book.published_date %>
+    <p>
+      <strong>Published:</strong>
+      <%= book.published_date.strftime("%B %d, %Y") %>
+    </p>
+  <% end %>
 
 </div>
